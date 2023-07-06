@@ -26,12 +26,11 @@ jobs:
       - name: Node build
         run: npm run build
 
-      - name: LS
-        run: ls -ls
-
       - name: Checkout fastid repo
         uses: actions/checkout@v3
         with:
           repository: fastid/fastid
           path: fastid
 
+      - name: LS
+        run: ls -ls
