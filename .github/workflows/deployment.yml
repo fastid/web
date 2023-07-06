@@ -29,9 +29,9 @@ jobs:
       - name: LS
         run: ls -ls
 
-      - name: Checkout tools repo
+      - name: Checkout fastid repo
         uses: actions/checkout@v3
         with:
-          repository: fastid/fastapi
+          repository: fastid/fastid
           path: fastid
 
