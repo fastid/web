@@ -24,3 +24,9 @@ jobs:
         run: npm run build
       - name: LS
         run: ls -ls
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: ./build/
+          repository: fastid/fastapi
