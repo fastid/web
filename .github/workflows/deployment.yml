@@ -37,9 +37,8 @@ jobs:
       - name: LS
         run: cd fastid/ && ls -ls
 
-      - name: Checkout fastid repo
-        uses: actions/checkout@v3
-        run: |
+      - uses: actions/checkout@v3
+      - run: |
           cd fastid/web/
           git config user.name github-actions
           git config user.email github-actions@github.com
