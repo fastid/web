@@ -7,8 +7,8 @@ on:
   pull_request:
     branches:
       - main
-#env:
-#  BUILD_PATH: fastid/web
+env:
+  BUILD_PATH: fastid/web
 
 jobs:
   build:
@@ -25,11 +25,11 @@ jobs:
       - name: Node install dependencies
         run: npm ci
 
-#      - name: Checkout fastid repo
-#        uses: actions/checkout@v3
-#        with:
-#          repository: fastid/fastapi
-#          path: fastid
+      - name: Checkout fastid repo
+        uses: actions/checkout@v3
+        with:
+          repository: fastid/fastapi
+          path: fastid
 
       - name: Node build
         run: npm run build
@@ -38,7 +38,5 @@ jobs:
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          repository: fastid/fastapi
-          directory: build/
           author_email: kostya@yandex.ru
           author_name: Kostya Ten
