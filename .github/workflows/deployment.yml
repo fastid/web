@@ -33,4 +33,4 @@ jobs:
           path: fastid
 
       - name: LS
-        run: ls -ls
+        run: cd fastid/ && ls -ls
