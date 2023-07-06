@@ -35,13 +35,13 @@ jobs:
         run: npm run build
 
       - name: LS
-        run: cd fastid/ && ls -ls
-
-      - uses: actions/checkout@v3
-      - run: |
+        run: |
+          cd fastid/
+          ls -ls
           cd fastid/web/
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
           git commit -m "generated"
           git push
+
