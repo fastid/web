@@ -36,9 +36,8 @@ jobs:
 
       - name: Checkout fastid repo
         uses: actions/checkout@v3
-        with:
-          path: fastid
         run: |
+          cd fastid/web
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
