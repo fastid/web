@@ -34,11 +34,13 @@ jobs:
       - name: Node build
         run: npm run build
 
-      - name: Commit & Push changes
-        uses: actions-js/push@master
+      - name: Checkout fastid repo
+        uses: actions/checkout@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          repository: fastid/fastapi
-          directory: fastid/web/
-          author_email: kostya@yandex.ru
-          author_name: Kostya Ten
+          path: fastid
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "generated"
+          git push
