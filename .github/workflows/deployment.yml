@@ -34,8 +34,7 @@ jobs:
       - name: Node build
         run: npm run build
 
-      - name: Checkout fastid repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         run: |
           cd fastid/web
           git config user.name github-actions
