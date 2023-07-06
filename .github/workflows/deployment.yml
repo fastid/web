@@ -28,5 +28,7 @@ jobs:
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          author_email: kostya@yandex.ru
+          author_name: Kostya Ten
           directory: ./build/
           repository: fastid/fastapi
