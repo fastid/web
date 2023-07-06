@@ -21,6 +21,6 @@ jobs:
       - name: Node install dependencies
         run: npm ci
       - name: Node build
-        run: react-scripts build
+        run: npm build
       - name: LS
         run: ls -ls
