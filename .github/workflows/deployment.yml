@@ -29,7 +29,7 @@ jobs:
       - name: Checkout fastid repo
         uses: actions/checkout@v3
         with:
-          repository: fastid/fastid
+          repository: fastid/fastapi
           path: fastid
 
       - name: LS
